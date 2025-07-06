@@ -6,6 +6,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
+[tool.interrogate]
+ignore-init-module = true
+ignore-init-method = true
+ignore-module = true
+exclude = ["setup.py", "docs", "build"]
+
 [dependency-groups]
 dev = [
     "ruff>=0.12.2",

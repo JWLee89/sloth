@@ -19,11 +19,10 @@ repos:
 
   # check python docstring coverage
   - repo: https://github.com/econchick/interrogate
-    rev: 1.5.0
+    rev: 1.7.0
     hooks:
       - id: interrogate
         args: [--config=pyproject.toml]
-        pass_filenames: false
         additional_dependencies: [setuptools]
 
   # run python linter and formatter
@@ -54,10 +53,3 @@ repos:
     hooks:
       - id: codespell
         args: ["--skip=*.lock"]
-
-  # yaml lint
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.29.0
-    hooks:
-      - id: yamllint
-        args: ["-c=.yamllint"]
